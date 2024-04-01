@@ -1,15 +1,21 @@
 import Head from "next/head";
-import styles from "../styles/homeNoAuth.module.scss"
+import styles from "@/styles/homeNoAuth.module.scss"
+import HeaderNoAuth from "@/src/components/homeNoAuth/headerNoAuth";
 
 const HomeNotAuth = function () {
     return (
         <>
             <Head>
-                <title></title>
+                <title>Victorflix</title>
+                <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+                <meta property="og:title" content="Victorflix" key="title" />
+                <meta name="description" content="Tenha acesso aos melhores conteúdos sobre programação de uma forma simples e fácil." />
             </Head>
-            <main>ON</main>
+            <main>
+                <HeaderNoAuth />
+            </main>
         </>
-    )
+    );
 };
 
 export default HomeNotAuth;
