@@ -8,11 +8,11 @@ const HeaderNoAuth = function () {
     return <>
         <div className={styles.ctaSection}>
             <img src="/homeNoAuth/logoCta.png" alt="logoCta" className={styles.imgCta} />
-            <p>Se cadastre para ter acesso aos cursos</p>
+            <p>Se cadastre para ter acesso aos videos</p>
             <img src="/homeNoAuth/logoCta.png" alt="logoCta" className={styles.imgCta} />
         </div>
         <Container className={styles.nav}>
-            <img src="/logoOnebitflix.svg" alt="logoOnebitflix" className={styles.imgLogoNav} />
+            <img src="/logo2.png" alt="logoOnebitflix" className={styles.imgLogoNav} />
             <div>
                 <Link href="/login">
                     <Button className={styles.navBtn} outline>Entrar</Button>

@@ -1,6 +1,6 @@
 @import "../../../../styles/colors.module.scss";
 .ctaSection {
-    background-color: $lightRed;
+    background-color: $orange;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@
     margin-top: 20px;
   }
   .imgLogoNav {
-    width: 180px;
+    width: 254px;
   }
 
   .navBtn {
@@ -27,7 +27,7 @@
     color: $lightGray;
   
     &:hover {
-      border-color: $lightRed;
+      border-color: $orange;
       color: white;
       background-color: transparent;
     }

@@ -1,21 +1,27 @@
 import Head from "next/head";
-import styles from "@/styles/homeNoAuth.module.scss"
 import HeaderNoAuth from "@/src/components/homeNoAuth/headerNoAuth";
+import PresentationSection from "@/src/components/homeNoAuth/presentationSection";
+import styles from "@/styles/HomeNoAuth.module.scss"
+import CardSections from "@/src/components/homeNoAuth/cardSections";
 
-const HomeNotAuth = function () {
+const HomeNoAuth = function () {
     return (
         <>
             <Head>
-                <title>Victorflix</title>
+                <title>FlixList</title>
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
                 <meta property="og:title" content="Victorflix" key="title" />
                 <meta name="description" content="Tenha acesso aos melhores conteúdos sobre programação de uma forma simples e fácil." />
             </Head>
             <main>
-                <HeaderNoAuth />
+                <div className={styles.sectionBackground}>
+                    <HeaderNoAuth />
+                    <PresentationSection />
+                </div>
+                <CardSections />
             </main>
         </>
     );
 };
 
-export default HomeNotAuth;
+export default HomeNoAuth;

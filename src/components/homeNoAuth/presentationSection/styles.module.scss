@@ -1,0 +1,113 @@
+@import "../../../../styles/colors.module.scss";
+.imgPresentation {
+  width: 570px;
+  margin-left: 95px;
+}
+
+.subTitle{
+  font-size: 18px;
+  font-weight: bold;
+  color: $orange;
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 50px;
+}
+.description {
+  font-size: 20px;
+  color: $lightGray;
+  margin: 20px 0px 40px 0px;
+}
+.btnCta {
+  font-weight: bold;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 14px 30px;
+  border: 2px solid $orange;
+
+  .btnImg {
+    width: 11px;
+  }
+  &:hover {
+    border-color: #c05402;
+    color: $lightGray;
+    background-color: transparent;
+  }
+}
+.arrowImg {
+  width: 30px;
+}
+
+@media (max-width: 1199px) and (min-width: 991px) {
+  .title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  .subTitle{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  .imgPresentation {
+    display: flex;
+    margin: 50px auto;
+  }
+}
+@media (max-width: 590px) {
+  .imgPresentation {
+    width: 95%;
+    margin-top: 25px;
+    margin-left: 19px;
+  }
+  .title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 34px;
+    text-align: center;
+  }
+  .description {
+    font-size: 14px;
+    color: $lightGray;
+    margin: 20px 0px 40px 0px;
+    text-align: center;
+  }
+  .btnCta {
+    padding: 10px 24px;
+    margin-left: 75px;
+  }
+}
+
+@media (max-width: 367px) {
+  .titleAccess {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .description {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  @media (max-width: 550px ){
+    .imgPresentation {
+      width: 95%;
+    }
+  }
+  .btnCta {
+    padding: 10px 24px;
+    margin-right: 55px;
+  }
+}
