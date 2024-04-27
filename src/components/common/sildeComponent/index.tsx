@@ -1,7 +1,8 @@
 
 import { Splide, SplideSlide } from "@splidejs/react-splide"
-import SlideCard from "@slideCard/index";
 import "@splidejs/splide/dist/css/splide.min.css"
+import { CourseType } from "@/src/services/courseService";
+import SlideCard from "../slideCard";
 
 interface props {
     course: CourseType[];
