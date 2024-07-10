@@ -17,16 +17,17 @@ export type CourseType = {
   episodes?: EpisodeType[];
 };
 
+
 const courseService = {
     getNewestCourses: async () => {
-      const res = await api.get("/courses/newest").catch((error) => {
-        console.log(error.response.data.message);
-  
-        return error.response;
-      });
-  
-      return res;
-    },
-  };
-  
+        try {
+            const response = await api.get('/courses/popular');
+            return response; // Verifique se a resposta tem a estrutura correta
+        } catch (error) {
+            console.error("Erro ao buscar os cursos mais recentes:", error);
+            throw error;
+        }
+    }
+};
+
 export default courseService;

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import styles from "/style.module.scss"
+import styles from "./style.module.scss"
 import { CourseType } from "@/src/services/courseService";
 
 interface props {
@@ -9,8 +9,9 @@ interface props {
 
 const SlideCard = function ({ course }: props) {
     return (
+        /* Envolvido em um link */
         <>
-            <Link href={`/courses/${course.id}`}>
+            <Link href={`/courses/${course.id}`}> /
                 <div className={styles.slide}>
                     <img
                         src={`${process.env.NEXT_PUBLIC_BASEURL}/${course.thumbnailUrl}`}

@@ -11,7 +11,7 @@ interface props {
 export default function SlideComponent({ course }: props) {
     return (
         <>
-            <div>
+            <div className="d-flex flex-column align-itens-center py-4">
                 <Splide
                     options={{
                         type: "loop",

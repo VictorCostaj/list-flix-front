@@ -3,8 +3,19 @@ import HeaderNoAuth from "@/src/components/homeNoAuth/headerNoAuth";
 import PresentationSection from "@/src/components/homeNoAuth/presentationSection";
 import styles from "@/styles/HomeNoAuth.module.scss"
 import CardSections from "@/src/components/homeNoAuth/cardSections";
+import SlideSection from "@/src/components/homeNoAuth/slideSection";
+import courseService, { CourseType } from "@/src/services/courseService";
+import { GetStaticProps } from "next/types";
+import { ReactNode } from "react";
+import Footer from "@/src/components/common/footer";
 
-const HomeNoAuth = function () {
+
+interface IndexPageProps {
+    children?: ReactNode
+    course: CourseType[];
+}
+
+const HomeNoAuth = ({course}: IndexPageProps) => {
     return (
         <>
             <Head>
@@ -19,9 +30,32 @@ const HomeNoAuth = function () {
                     <PresentationSection />
                 </div>
                 <CardSections />
+                <SlideSection newestCourses={course} />
+                <Footer />
             </main>
         </>
     );
 };
+export const getStaticProps: GetStaticProps = async () => {
+    try {
+        const res = await courseService.getNewestCourses();
+        return {
+            props: {
+                curso: res.data,
+            },
+            revalidate: 3600 * 24, // Revalidar a cada 24 horas
+        };
+    } catch (error) {
+        console.error("Falha ao buscar os cursos mais recentes:", error);
+        return {
+            props: {
+                curso: [],
+            },
+            revalidate: 3600 * 24, // Ainda revalidar a cada 24 horas
+        };
+    }
+};
+
+
 
 export default HomeNoAuth;
