@@ -1,0 +1,38 @@
+@import "../../../../styles/colors.module.scss";
+.header {
+    background-color: black;
+  }
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 5px;
+  }
+  .headerLogo {
+    width: 90%;
+    cursor: pointer;
+  }
+  .headerBtn {
+    margin: 0px 3px;
+    border-color: transparent;
+    color: $lightGray;
+    font-size: 17px;
+  
+    &:hover {
+      border-color: $orange;
+      color: white;
+      background-color: transparent;
+    }
+  }
+  @media (max-width: 575px) {
+    .headerContainer {
+      padding: 20px 26px;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 402px) {
+    .headerContainer {
+      justify-content: center;
+    }
+  }
