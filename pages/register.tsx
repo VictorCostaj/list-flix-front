@@ -57,7 +57,7 @@ const Register = function () {
         <>
             {/* ############################# HEADER ##########################*/}
             <Head>
-                <title>Onebitflix - Registro</title>
+                <title>FlixList - Registro</title>
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
                 <script src="https://jsuites.net/v4/jsuites.js"></script>
             </Head>
@@ -67,12 +67,12 @@ const Register = function () {
                 <HeaderGeneric logoUrl="/" btnUrl="/login" btnContent="Quero fazer login" />
                 {/* ############################# CONTAINER ##########################*/}
                 <Container className="py-5">
-                    <p>Bem-vindo(a) ao OneBitFlix!</p>
+                    <p className={styles.formTitle}>Bem-vindo(a) FlixList!</p>
 
 
                     {/* ############################# FORMULÁRIO NOME ##########################*/}
                     <Form className={styles.form} onSubmit={handleRegister}>
-                        <p className="text-center"><strong>Bem-vindo(a) ao OneBitFlix!</strong> </p>
+                        <p className="text-center" ><strong>Bem-vindo(a) ao FlixList!</strong> </p>
                         <FormGroup>
                             <Label for="firstName" className={styles.label}>
                                 NOME
