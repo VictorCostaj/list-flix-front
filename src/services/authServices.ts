@@ -34,7 +34,7 @@ const authService = {
       return error;
     });
     if (res.status === 200) {
-      sessionStorage.setItem("onebitflix-token", res.data.token);
+      sessionStorage.setItem("flixlist-token", res.data.token);
     }
     return res;
   },

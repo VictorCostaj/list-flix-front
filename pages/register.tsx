@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-sync-scripts */
 import styles from '../styles/registerLogin.styles.module.scss';
 import Head from 'next/head';
@@ -15,6 +16,12 @@ const Register = function () {
 
     const [toastIsOpen, setToastIsOpen] = useState(false);
     const [toastMessage, setToastMessage] = useState("");
+
+    useEffect(() => {
+        if (sessionStorage.getItem("flixlist-token")) {
+            router.push("/home");
+        }
+    }, []);
 
     const handleRegister = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();

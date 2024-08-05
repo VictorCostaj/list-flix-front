@@ -16,7 +16,7 @@ const Login = function () {
     const [toastMessage, setToastMessage] = useState("");
 
     useEffect(() => {
-        if (sessionStorage.getItem("onebitflix-token")) {
+        if (sessionStorage.getItem("flixlist-token")) {
             router.push("/home");
         }
     }, []);
