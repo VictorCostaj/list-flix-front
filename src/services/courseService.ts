@@ -17,7 +17,6 @@ export type CourseType = {
   episodes?: EpisodeType[];
 };
 
-
 const courseService = {
     getNewestCourses: async () => {
         try {

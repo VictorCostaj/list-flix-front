@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Button, Container } from "reactstrap";
 import styles from "./styles.module.scss";
@@ -13,7 +14,7 @@ const HeaderGeneric = function ({ btnContent, btnUrl, logoUrl }: props) {
         <div className={styles.header}>
             <Container className={styles.headerContainer}>
                 <Link href={logoUrl} >
-                    <img src="/logo3.png" alt="LogoRegister" className={styles.headerLogo} />
+                    <img src="/FlixList-logo.png" alt="LogoRegister" className={styles.headerLogo} />
                 </Link>
 
                 <Link href={btnUrl}>

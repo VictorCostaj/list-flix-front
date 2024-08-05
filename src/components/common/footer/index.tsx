@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
+/* eslint-disable @next/next/no-img-element */
 import { Container } from "reactstrap";
 import styles from "./styles.module.scss"
 
@@ -5,7 +7,7 @@ const Footer = function () {
     return <>
         <Container className={styles.footer}>
             <img src="/logo2.png" alt="logoFooter" className={styles.footerLogo} />
-            <a href="#" target={"blank"} className={styles.footerLink}>Flixlist</a>
+            <a href="/" target={"blank"} className={styles.footerLink}>Flixlist</a>
         </Container>
     </>;
 };

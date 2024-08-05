@@ -9,7 +9,7 @@
     padding: 15px 5px;
   }
   .headerLogo {
-    width: 90%;
+    width: 40%;
     cursor: pointer;
   }
   .headerBtn {
@@ -27,12 +27,15 @@
   @media (max-width: 575px) {
     .headerContainer {
       padding: 20px 26px;
-      gap: 20px;
+      gap: 10px;
     }
   }
 
   @media (max-width: 402px) {
     .headerContainer {
       justify-content: center;
+    }
+    .headerLogo {
+      margin-left: 90px;
     }
   }
