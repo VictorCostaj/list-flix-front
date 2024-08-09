@@ -17,7 +17,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
-    "reactstrap": "^9.2.2"
+    "reactstrap": "^9.2.2",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
