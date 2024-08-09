@@ -6,7 +6,7 @@ import { Button, Container } from "reactstrap";
 import Link from "next/link";
 
 const FeaturedSection = function () {
-    const { data, error } = useSWR("/featured", courseService.getFeaturedCourses);
+    const { data, error } = useSWR("/popular", courseService.getNewestCourses);
 
     if (error) return error;
     if (!data) return (

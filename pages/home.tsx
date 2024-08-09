@@ -2,6 +2,7 @@ import Head from "next/head";
 import router from "next/router";
 import { useEffect } from "react";
 import FeaturedSection from "@/src/components/homeAuth/featuresSection";
+import NewestCategory from "@/src/components/homeAuth/newestCategory";
 
 const HomeAuth = function () {
     return (
@@ -12,6 +13,7 @@ const HomeAuth = function () {
             </Head>
             <main>
                <FeaturedSection/>
+               <NewestCategory/>
             </main>
         </>
     );
