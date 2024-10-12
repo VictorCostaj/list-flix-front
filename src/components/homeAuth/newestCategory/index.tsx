@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import courseService from "../../../services/courseService";
 import SlideComponent from "../../common/sildeComponent";
+import styles from "../../../../styles/slideCategory.module.scss";
 
 const NewestCategory = function () {
     const { data, error } = useSWR("/featured", courseService.getFeaturedCourses);
@@ -14,10 +15,10 @@ const NewestCategory = function () {
         );
 
     return (
-        <>
+        <div>
             <p>LANÇAMENTOS</p>
             <SlideComponent course={data.data} />
-        </>
+        </div>
     )
 };
 export default NewestCategory;

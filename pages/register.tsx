@@ -6,7 +6,7 @@ import HeaderGeneric from '@/src/components/common/headerGeneric';
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
 import Footer from '@/src/components/common/footer';
 import { FormEvent, useState, useEffect, } from "react";
-import authService from '@/src/services/authServices';
+import authService from '@/src/services/authService';
 import router, { useRouter } from "next/router";
 import { Toast, ToastBody } from "reactstrap";
 import ToastComponent from '@/src/components/common/toast';

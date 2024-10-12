@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import styles from "../presentationSection/styles.module.scss";
+import styles from "../presentationSection/style.module.scss";
 import { Container, Row, Col, Button } from "reactstrap";
 
 const PresentationSection = function () {

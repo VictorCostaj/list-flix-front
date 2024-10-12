@@ -13,7 +13,7 @@ import "aos/dist/aos.css"
 
 
 interface IndexPageProps {
-    children?: ReactNode
+    children?: ReactNode;
     course: CourseType[];
 }
 
@@ -48,23 +48,13 @@ const HomeNoAuth = ({ course }: IndexPageProps) => {
     );
 };
 export const getStaticProps: GetStaticProps = async () => {
-    try {
-        const res = await courseService.getNewestCourses();
-        return {
-            props: {
-                curso: res.data,
-            },
-            revalidate: 3600 * 24, // Revalidar a cada 24 horas
-        };
-    } catch (error) {
-        console.error("Falha ao buscar os cursos mais recentes:", error);
-        return {
-            props: {
-                curso: [],
-            },
-            revalidate: 3600 * 24, // Ainda revalidar a cada 24 horas
-        };
-    }
+    const res = await courseService.getNewestCourses();
+    return {
+        props: {
+            course: res.data,
+        },
+        revalidate: 3600 * 24,
+    };
 };
 
 

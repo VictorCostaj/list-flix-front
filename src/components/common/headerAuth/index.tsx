@@ -60,7 +60,6 @@ export const HeaderAuth = function () {
                         <p className={styles.modalLink}>Meus Dados</p>
                     </Link>
                     <p className={styles.modalLink} onClick={handleLogout}>Sair</p>
-
                 </Modal>
             </Container>
         </>

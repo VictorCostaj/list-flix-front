@@ -7,7 +7,7 @@ import Footer from '../src/components/common/footer';
 import { FormEvent, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ToastComponent from '../src/components/common/toast';
-import authService from '../src/services/authServices';
+import authService from '../src/services/authService';
 
 const Login = function () {
     const router = useRouter();
@@ -58,16 +58,16 @@ const Login = function () {
     return (
         <>
             <Head>
-                <title>Onebitflix - Login</title>
+                <title>FlixList - Login</title>
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
             </Head>
             <main className={styles.main}>
                 <HeaderGeneric logoUrl="/" btnUrl="/register" btnContent="Quero fazer parte" />
                 <Container className="py-5">
-                    <p className={styles.formTitle}>Bem-vindo(a) ao OneBitFlix!</p>
+                    <p className={styles.formTitle}>Bem-vindo(a) ao FlixList!</p>
                     <Form className={styles.form} onSubmit={handleLogin}>
                         <p className="text-center">
-                            <strong>Bem-vindo(a) ao OneBitFlix!</strong>
+                            <strong>Bem-vindo(a) ao FlixList!</strong>
                         </p>
                         <FormGroup>
                             <Label for="email" className={styles.label}>
