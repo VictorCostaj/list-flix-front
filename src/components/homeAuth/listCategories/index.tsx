@@ -16,6 +16,7 @@ const ListCategories = function () {
 
                 data.data?.categories?.map((category: CategoryType) => (
                     <React.Fragment key={category.id}>
+
                         <p>{category.name}</p>
                         <ListCategoriesSlide key={category.id}
                             categoryId={category.id}

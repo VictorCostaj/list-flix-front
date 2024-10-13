@@ -16,7 +16,7 @@ const NewestCategory = function () {
 
     return (
         <div>
-            <p>LANÇAMENTOS</p>
+            <p className={styles.titleCategory}>Lançamentos</p>
             <SlideComponent course={data.data} />
         </div>
     )
